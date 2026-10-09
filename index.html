@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff3f6">
+  <title>For My Favorite Person ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Decorative roses stay at the page edges while scrolling. -->
+  <div class="rose-decorations" aria-hidden="true">
+    <img class="rose rose-one" src="images/r1.png" alt="">
+    <img class="rose rose-two" src="images/r2.png" alt="">
+    <img class="rose rose-three" src="images/r2.png" alt="">
+    <img class="rose rose-four" src="images/r1.png" alt="">
+    <img class="rose rose-five" src="images/r2.png" alt="">
+    <img class="rose rose-six" src="images/r1.png" alt="">
+  </div>
+
+  <audio id="bgMusic" loop preload="none">
+    <source src="music/love-song.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="hearts" aria-hidden="true"></div>
+
+  <!-- Opening letter screen -->
+  <div class="opening" id="opening">
+    <div class="tiny-flower flower-a">✿</div>
+    <div class="tiny-flower flower-b">❀</div>
+    <div class="tiny-flower flower-c">✿</div>
+    <div class="tiny-flower flower-d">✿</div>
+    <div class="tiny-flower flower-e">✿</div>
+    <div class="tiny-flower flower-f">❀</div>
+   
+    <p class="opening-small">A little something for you...</p>
+
+    <button class="envelope" id="envelope" type="button" aria-label="Open your love letter" onclick="openLetter()">
+      <span class="envelope-back"></span>
+      <span class="letter">
+        <span>For my favorite person ❤️<small>with all my love</small></span>
+      </span>
+      <span class="envelope-flap"></span>
+      <span class="envelope-front"></span>
+      <span class="heart-seal"><span>♥</span></span>
+      <span class="envelope-flower flower-left">✿</span>
+      <span class="envelope-flower flower-right">❀</span>
+    </button>
+
+    <h1 class="open-title">Open Me ❤️</h1>
+    <p class="tap-text">A little piece of my heart is inside</p>
+    <button class="open-button" type="button" onclick="openLetter()">Open the letter</button>
+  </div>
+
+  <main id="mainContent" class="hidden">
+    <button class="music-btn" id="musicBtn" type="button" onclick="toggleMusic()" aria-label="Play or pause music" title="Play or pause music">♫</button>
+
+    <section class="hero">
+      <div class="hero-flower flower1">❀</div>
+      <div class="hero-flower flower2">❀</div>
+      <div class="hero-flower flower3">✿</div>
+      <div class="hero-flower flower4">✿</div>
+      <p class="small-text">365 days of us ❤️</p>
+      <h1>One Year<br>With You</h1>
+      <p class="subtitle">One year, countless memories,<br>and still my favorite person.</p>
+      <button class="main-button" type="button" onclick="scrollToMemories()">Our Memories</button>
+      <span class="scroll-hint" aria-hidden="true">scroll gently</span>
+    </section>
+
+    <section class="message">
+      <p class="label">A little message for you</p>
+      <h2>To My Favorite Person ❤️</h2>
+      <p>I don't know how one year passed so quickly, but I'm so happy that I got to spend it with you.</p>
+      <p>Thank you for every smile, every little moment, every silly conversation, every hug, and every memory we've made together.</p>
+      <p>You made this year one of the most beautiful chapters of my life.</p>
+      <div class="heart" aria-hidden="true">♥</div>
+    </section>
+
+    <section class="memories" id="memories">
+      <p class="label">Little moments</p>
+      <h2>Our Memories 📸</h2>
+      <div class="photo-grid">
+        <figure class="photo-card"><img src="images/1.jpeg" alt="A favorite memory together" loading="lazy"></figure>
+        <figure class="photo-card"><img src="images/4.jpeg" alt="A special moment together" loading="lazy"></figure>
+        <figure class="photo-card"><img src="images/3.jpeg" alt="A happy memory together" loading="lazy"></figure>
+        <figure class="photo-card"><img src="images/2.jpeg" alt="Another favorite memory" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="videos">
+      <p class="label">Moving memories</p>
+      <h2>Little Moments 🎥</h2>
+      <div class="video-grid">
+        <video controls playsinline preload="metadata"><source src="videos/memory1.mp4" type="video/mp4">Your browser does not support video.</video>
+        <video controls playsinline preload="metadata"><source src="videos/memory2.mp4" type="video/mp4">Your browser does not support video.</video>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <p class="label">Our little story</p>
+      <h2>One Year of Us ❤️</h2>
+      <div class="timeline-item"><span>01</span><div><h3>The Beginning</h3><p>The day our little story started.</p></div></div>
+      <div class="timeline-item"><span>03</span><div><h3>Little Adventures</h3><p>New places, silly moments and lots of smiles.</p></div></div>
+      <div class="timeline-item"><span>06</span><div><h3>Half a Year</h3><p>Six months full of beautiful memories.</p></div></div>
+      <div class="timeline-item"><span>12</span><div><h3>One Year ❤️</h3><p>365 days of choosing each other.</p></div></div>
+    </section>
+
+    <section class="final">
+      <div class="big-heart" aria-hidden="true">♥</div>
+      <h2>Will You Stay With Me?</h2>
+      <p>One year down.<br>So many more memories to make.</p>
+      <button class="main-button" type="button" onclick="loveMessage()">Click Me ❤️</button>
+      <p id="secret" aria-live="polite"></p>
+    </section>
+
+    <footer>Made with all my love ❤️<br>For my favorite person.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
